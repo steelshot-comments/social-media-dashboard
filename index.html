@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <link rel="stylesheet" href="./style.css" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        fontFamily: {
+          body: 'Inter',
+        },
+        extend: {
+          colors: {
+            'lime-green': 'hsl(163, 72%, 41%)',
+            'bright-red': 'hsl(356, 69%, 56%)',
+            'facebook': 'hsl(208, 92%, 53%)',
+            'twitter': 'hsl(203, 89%, 53%)',
+            'orange': 'hsl(37, 97%, 70%)',
+            'pink': 'hsl(329, 70%, 58%)',
+            'youTube': 'hsl(348, 97%, 39%)',
+            'very-pale-blue': 'hsl(225, 100%, 98%)',
+            'light-grayish-blue': 'hsl(227, 47%, 96%)',
+            'very-pale-gray': '#dde2f3',
+            'dark-grayish-blue': 'hsl(228, 12%, 44%)',
+            'very-dark-text': 'hsl(230, 17%, 14%)',
+            'very-dark-blue': 'hsl(230, 17%, 14%)',
+            'desaturated-blue': 'hsl(228, 34%, 25%)',
+            'top-bg-pattern-dark': 'hsl(232, 19%, 15%)',
+            'cardBg': 'hsl(228, 28%, 20%)',
+            'primary': 'hsl(0, 0%, 100%)',
+            'secondary': 'hsl(228, 34%, 66%)',
+            'toggle-blue': 'hsl(210, 78%, 56%)',
+            'toggle-green': 'hsl(146, 68%, 55%)',
+            'toggle-gray': 'hsl(230, 22%, 74%)',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body
+  class="min-h-screen select-none no-scrollbar font-body bg-white dark:bg-very-dark-blue very-dark-text dark:text-primary pt-10 px-10 xl:px-40 before:content-[''] before:absolute before:top-0 before:left-0 before:h-64 before:w-full before:bg-very-pale-blue before:dark:bg-top-bg-pattern-dark before:-z-10 before:rounded-br-2xl before:rounded-bl-2xl">
+
+  <div class="max-w-[1120px] mx-auto">
+    <div class="flex flex-col sm:flex-row items-center justify-between mb-10">
+      <div>
+        <h1 class="text-3xl font-bold">Social Media Dashboard</h1>
+        <h4 class="text-secondary font-bold">Total Followers: 23,004</h4>
+      </div>
+      <div class="w-full border-t-2 border-slate-500 mt-2 mb-6 sm:hidden"></div>
+      <label for="darkMode" class="w-full justify-between relative inline-block sm:w-40 h-7 cursor-pointer flex items-center">
+        Dark Mode
+        <input type="checkbox" id="darkMode" class="peer opacity-0 w-0 h-0">
+        <span class="theme-switcher absolute w-14 top-0 right-0 bottom-0 bg-slate-500 peer-checked:bg-gradient-to-r peer-checked:from-toggle-blue peer-checked:to-toggle-green transition-all duration-400 rounded-3xl before:content-[''] before:absolute before:w-5 before:h-5 before:left-1 before:bottom-1 before:bg-white before:transition-all before:duration-400 peer-checked:bg-blue-100 peer-checked:before:translate-x-7 before:rounded-full"></span>
+      </label>
+    </div>
+
+    <div class="grid grid-rows-4 md:grid-rows-2 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-1 w-full gap-8">
+      <div
+        class="flex flex-col justify-center items-center border-t-4 border-facebook bg-light-grayish-blue dark:bg-cardBg grow rounded space-y-6 py-6 cursor-pointer hover:bg-very-pale-gray dark:hover:bg-desaturated-blue transition-all duration-300">
+        <span class="flex text-secondary">
+          <img src="./images/icon-facebook.svg" alt="facebook" class="w-6 h-6 mr-2">
+          @nathanf
+        </span>
+        <div class="flex flex-col items-center">
+          <span class="text-6xl font-bold">
+            1987
+          </span>
+          <span class="tracking-widest uppercase text-secondary font-bold">
+            Followers
+          </span>
+        </div>
+        <span class="flex items-center text-lime-green">
+          <img src="./images/icon-up.svg" alt="up" class="inline mr-1" />
+          12 Today
+        </span>
+      </div>
+      <div
+        class="flex flex-col justify-center items-center border-t-4 border-twitter bg-light-grayish-blue dark:bg-cardBg grow rounded space-y-6 py-6 cursor-pointer hover:bg-very-pale-gray dark:hover:bg-desaturated-blue transition-all duration-300">
+        <span class="flex text-secondary">
+          <img src="./images/icon-twitter.svg" alt="facebook" class="w-6 h-6 mr-2">
+          @nathanf
+        </span>
+        <div class="flex flex-col items-center">
+          <span class="text-6xl font-bold">
+            1044
+          </span>
+          <span class="tracking-widest uppercase text-secondary font-bold">
+            Followers
+          </span>
+        </div>
+        <span class="flex items-center text-lime-green">
+          <img src="./images/icon-up.svg" alt="up" class="inline mr-1" />
+          99 Today
+        </span>
+      </div>
+      <div
+        class="relative flex flex-col justify-center items-center bg-light-grayish-blue dark:bg-cardBg grow rounded space-y-6 py-6 cursor-pointer hover:bg-very-pale-gray dark:hover:bg-desaturated-blue transition-all duration-300 overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:h-1 before:w-full before:bg-gradient-to-r from-orange to-pink">
+        <span class="flex text-secondary">
+          <img src="./images/icon-instagram.svg" alt="facebook" class="w-6 h-6 mr-2">
+          @realnathanf
+        </span>
+        <div class="flex flex-col items-center">
+          <span class="text-6xl font-bold">
+            11k
+          </span>
+          <span class="tracking-widest uppercase text-secondary font-bold">
+            Followers
+          </span>
+        </div>
+        <span class="flex items-center text-lime-green">
+          <img src="./images/icon-up.svg" alt="up" class="inline mr-1" />
+          1099 Today
+        </span>
+      </div>
+      <div
+        class="flex flex-col justify-center items-center border-t-4 border-youTube bg-light-grayish-blue dark:bg-cardBg grow rounded space-y-6 py-6 cursor-pointer hover:bg-very-pale-gray dark:hover:bg-desaturated-blue transition-all duration-300">
+        <span class="flex text-secondary">
+          <img src="./images/icon-youtube.svg" alt="facebook" class="w-6 h-6 mr-2">
+          Nathan F.
+        </span>
+        <div class="flex flex-col items-center">
+          <span class="text-6xl font-bold">
+            8239
+          </span>
+          <span class="tracking-widest uppercase text-secondary font-bold">
+            Subscribers
+          </span>
+        </div>
+        <span class="flex items-center text-bright-red">
+          <img src="./images/icon-down.svg" alt="down" class="inline mr-1" />
+          144 Today
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-[1120px] mx-auto mb-10">
+    <h2 class="text-3xl font-bold mt-10 mb-6">Overview - Today</h2>
+    <div class="flex flex-col md:grid md:grid-cols-2 md:grid-rows-8 gap-6 lg:grid-cols-4 lg:grid-rows-2 lg:gap-y-6 lg:gap-x-8">
+      <div
+        class="bg-light-grayish-blue dark:bg-cardBg px-4 py-6 space-y-6 box-border rounded cursor-pointer hover:bg-very-pale-gray dark:hover:bg-desaturated-blue transition-all duration-300">
+        <div class="flex justify-between items-center">
+          Page Views
+          <img src="./images/icon-facebook.svg" alt="facebook" class="w-6 h-6">
+        </div>
+        <div class="flex justify-between items-end">
+          <span class="text-3xl font-bold">
+            52
+          </span>
+          <span>
+            <img src="./images/icon-up.svg" alt="down" class="inline" />
+            2%
+          </span>
+        </div>
+      </div>
+      <div
+        class="bg-light-grayish-blue dark:bg-cardBg px-4 py-6 space-y-6 box-border rounded cursor-pointer hover:bg-very-pale-gray dark:hover:bg-desaturated-blue transition-all duration-300">
+        <div class="flex justify-between">
+          Likes
+          <img src="./images/icon-facebook.svg" alt="facebook" class="w-6 h-6">
+        </div>
+        <div class="flex justify-between items-end">
+          <span class="text-3xl font-bold">
+            23
+          </span>
+          <span>
+            <img src="./images/icon-down.svg" alt="down" class="inline" />
+            2%
+          </span>
+        </div>
+      </div>
+      <div
+        class="bg-light-grayish-blue dark:bg-cardBg px-4 py-6 space-y-6 box-border rounded cursor-pointer hover:bg-very-pale-gray dark:hover:bg-desaturated-blue transition-all duration-300">
+        <div class="flex justify-between">
+          Likes
+          <img src="./images/icon-instagram.svg" alt="facebook" class="w-6 h-6">
+        </div>
+        <div class="flex justify-between items-end">
+          <span class="text-3xl font-bold">
+            23
+          </span>
+          <span>
+            <img src="./images/icon-up.svg" alt="down" class="inline" />
+            2%
+          </span>
+        </div>
+      </div>
+      <div
+        class="bg-light-grayish-blue dark:bg-cardBg px-4 py-6 space-y-6 box-border rounded cursor-pointer hover:bg-very-pale-gray dark:hover:bg-desaturated-blue transition-all duration-300">
+        <div class="flex justify-between">
+          Profile Views
+          <img src="./images/icon-instagram.svg" alt="facebook" class="w-6 h-6">
+        </div>
+        <div class="flex justify-between items-end">
+          <span class="text-3xl font-bold">
+            23
+          </span>
+          <span class="text-lime-green">
+            <img src="./images/icon-up.svg" alt="down" class="inline" />
+            2%
+          </span>
+        </div>
+      </div>
+      <div
+        class="bg-light-grayish-blue dark:bg-cardBg px-4 py-6 space-y-6 box-border rounded cursor-pointer hover:bg-very-pale-gray dark:hover:bg-desaturated-blue transition-all duration-300">
+        <div class="flex justify-between">
+          Retweets
+          <img src="./images/icon-twitter.svg" alt="facebook" class="w-6 h-6">
+        </div>
+        <div class="flex justify-between items-end">
+          <span class="text-3xl font-bold">
+            23
+          </span>
+          <span class="text-lime-green">
+            <img src="./images/icon-up.svg" alt="down" class="inline" />
+            2%
+          </span>
+        </div>
+      </div>
+      <div
+        class="bg-light-grayish-blue dark:bg-cardBg px-4 py-6 space-y-6 box-border rounded cursor-pointer hover:bg-very-pale-gray dark:hover:bg-desaturated-blue transition-all duration-300">
+        <div class="flex justify-between">
+          Likes
+          <img src="./images/icon-twitter.svg" alt="facebook" class="w-6 h-6">
+        </div>
+        <div class="flex justify-between items-end">
+          <span class="text-3xl font-bold">
+            23
+          </span>
+          <span class="text-lime-green">
+            <img src="./images/icon-up.svg" alt="down" class="inline" />
+            2%
+          </span>
+        </div>
+      </div>
+      <div
+        class="bg-light-grayish-blue dark:bg-cardBg px-4 py-6 space-y-6 box-border rounded cursor-pointer hover:bg-very-pale-gray dark:hover:bg-desaturated-blue transition-all duration-300">
+        <div class="flex justify-between">
+          Likes
+          <img src="./images/icon-youtube.svg" alt="facebook" class="w-6 h-6">
+        </div>
+        <div class="flex justify-between items-end">
+          <span class="text-3xl font-bold">
+            23
+          </span>
+          <span class="text-bright-red">
+            <img src="./images/icon-down.svg" alt="down" class="inline" />
+            2%
+          </span>
+        </div>
+      </div>
+      <div
+        class="bg-light-grayish-blue dark:bg-cardBg px-4 py-6 space-y-6 box-border rounded cursor-pointer hover:bg-very-pale-gray dark:hover:bg-desaturated-blue transition-all duration-300">
+        <div class="flex justify-between">
+          Total Views
+          <img src="./images/icon-youtube.svg" alt="facebook" class="w-6 h-6">
+        </div>
+        <div class="flex justify-between items-end">
+          <span class="text-3xl font-bold">
+            23
+          </span>
+          <span class="text-bright-red">
+            <img src="./images/icon-down.svg" alt="down" class="inline" />
+            2%
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
